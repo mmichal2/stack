@@ -12,6 +12,8 @@ class Stack:
         self._data.append(element)
 
     def pop(self):
+        if not self._data:
+            raise EmptyStackError
         return self._data.pop()
 
     def peek(self):
